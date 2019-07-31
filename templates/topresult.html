@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Python Flask Bucket List App</title>
+ 
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    
+  </head>
+  <body>
+<div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="http://127.0.0.1:5000/topApp">Back</a>
+                    </li>
+                    <li role="presentation" class="active"><a href="http://localhost:5000/#">Home</a>
+                    </li>
+                
+                </ul>
+            </nav>
+            <h3 class="text-muted">App Analyser</h3>
+        </div>
+<div class="jumbotron">
+{% for a in name %}
+	<h3><font color="#44921f"><b>Name: </b>{{ a[0] }}</font></h3>
+	<br>
+	<b>Price: </b>{{ a[1] }}
+	<br>
+	<b>Description: </b>{{ a[2] }}
+	<br>
+	<b>Rating: </b>{{ a[4] }}
+	<br>
+    
+     
+	<b>URL: </b><a href='https://play.google.com{{ a[3] }}'>{{ a[3] }}</a>
+	<br>
+	<hr>
+	<br>
+{% endfor %}
+</div>
+</div>
+</body>
+</html>
